@@ -3,4 +3,4 @@
 Visual Studio project for ASP.NET Core, Angular 2, and TypeScript
 
 * Visual Studio Update 2
-* rc1-update1
+* ASP.NET Core RC1
