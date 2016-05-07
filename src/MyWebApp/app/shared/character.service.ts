@@ -6,6 +6,7 @@ import { CONFIG } from './config';
 
 @Injectable()
 export class CharacterService {
+    
     constructor(private http: Http) { }
 
     getCharacters() {
