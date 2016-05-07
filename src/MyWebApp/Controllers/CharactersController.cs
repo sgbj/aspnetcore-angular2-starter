@@ -13,22 +13,15 @@ namespace MyWebApp.Controllers
         public IActionResult Get()
         {
             return Json(new[] {
-                "Chewbacca",
-                "Rey",
-                "Finn (FN2187)",
-                "Han Solo",
-                "Leia Organa",
-                "Luke Skywalker",
-                "Poe Dameron",
-                "Kylo Ren",
-                "Supreme Commander Snoke",
-                "R2-D2",
-                "BB8",
-                "C-3PO",
-                "Maz Kanata",
-                "Captain Phasma",
-                "General Hux",
-                "Lor San Tekka",
+                "Gollum",
+                "Gandalf",
+                "Legolas",
+                "Aragorn",
+                "Frodo Baggins",
+                "Bilbo Baggins",
+                "Saruman",
+                "Gimli",
+                "Galadriel"
             });
         }
     }

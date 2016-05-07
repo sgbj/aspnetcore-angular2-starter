@@ -8,4 +8,10 @@ Visual Studio project for ASP.NET Core, Angular 2, and TypeScript
 * Material Design Lite
 * Swagger (Swashbuckle)
 
-![Screenshot](https://raw.githubusercontent.com/sgbj/aspnetcore-angular2-starter/master/screenshot.jpg)
+## screenshots
+
+![Characters](https://raw.githubusercontent.com/sgbj/aspnetcore-angular2-starter/master/screenshots/characters.jpg)
+
+![About](https://raw.githubusercontent.com/sgbj/aspnetcore-angular2-starter/master/screenshots/about.jpg)
+
+![Swagger](https://raw.githubusercontent.com/sgbj/aspnetcore-angular2-starter/master/screenshots/swagger.jpg)
