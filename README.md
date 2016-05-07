@@ -2,7 +2,7 @@
 
 Visual Studio project for ASP.NET Core, Angular 2, and TypeScript
 
-* Visual Studio Update 2
+* Visual Studio 2015 Update 2
 * ASP.NET Core RC1
 * Angular 2 Beta 15
 * Material Design Lite
