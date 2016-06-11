@@ -1,3 +1,3 @@
-﻿export let CONFIG = {
+﻿export const CONFIG = {
     charactersUrl: 'api/characters'
 }

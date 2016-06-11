@@ -4,10 +4,10 @@ import { CharacterService } from '../shared/character.service';
 
 @Component({
     moduleId: __moduleName,
-    templateUrl: 'characters.component.html',
+    templateUrl: 'home.component.html',
     providers: [CharacterService]
 })
-export class CharactersComponent implements OnInit {
+export class HomeComponent implements OnInit {
     characters: string[];
 
     constructor(private characterService: CharacterService) { }

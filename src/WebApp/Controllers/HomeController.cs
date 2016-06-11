@@ -1,6 +1,6 @@
-﻿using Microsoft.AspNet.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
-namespace MyWebApp.Controllers
+namespace WebApp.Controllers
 {
     public class HomeController : Controller
     {

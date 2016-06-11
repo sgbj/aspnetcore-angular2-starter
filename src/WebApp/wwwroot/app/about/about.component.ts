@@ -8,12 +8,7 @@
                 <h2 class="mdl-card__title-text">About</h2>
             </div>
             <div class="mdl-card__supporting-text">
-                You're ready to start creating your own application.
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-                <a href="/swagger/ui" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                    API docs
-                </a>
+                You're ready to start working on your own application!
             </div>
         </div>
     `

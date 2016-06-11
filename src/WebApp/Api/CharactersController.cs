@@ -1,18 +1,14 @@
-﻿using Microsoft.AspNet.Mvc;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Microsoft.AspNetCore.Mvc;
 
-namespace MyWebApp.Controllers
+namespace WebApp.Api
 {
     [Route("api/[controller]")]
-    [Produces("application/json")]
     public class CharactersController : Controller
     {
         [HttpGet]
-        [Produces(typeof(string[]))]
         public IActionResult Get()
         {
-            return Json(new[] {
+            return Ok(new[] {
                 "Gollum",
                 "Gandalf",
                 "Legolas",
