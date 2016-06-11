@@ -1,4 +1,4 @@
-﻿/// <binding ProjectOpened='default' />
+/// <binding ProjectOpened='default' />
 var gulp = require('gulp');
 
 var paths = {

@@ -7,18 +7,14 @@ Visual Studio project for ASP.NET Core, Angular 2, and TypeScript
 * Angular 2 Beta 17
 * Material Design Lite
 
-## screenshots
-
-![Characters](https://raw.githubusercontent.com/sgbj/aspnetcore-angular2-starter/master/screenshots/characters.jpg)
-
-![About](https://raw.githubusercontent.com/sgbj/aspnetcore-angular2-starter/master/screenshots/about.jpg)
-
 ## command line
 
 From the root folder, type the following commands:
 
 ```
 cd src/webapp
+npm install
+gulp
 tsc
 dotnet restore
 dotnet run
@@ -41,3 +37,9 @@ Content root path: aspnetcore-angular2-starter\src\WebApp
 Now listening on: http://localhost:5000
 Application started. Press Ctrl+C to shut down.
 ```
+
+## screenshots
+
+![Characters](https://raw.githubusercontent.com/sgbj/aspnetcore-angular2-starter/master/screenshots/characters.jpg)
+
+![About](https://raw.githubusercontent.com/sgbj/aspnetcore-angular2-starter/master/screenshots/about.jpg)
