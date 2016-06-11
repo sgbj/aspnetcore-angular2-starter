@@ -1,14 +1,16 @@
-﻿import { Component, OnInit, ViewEncapsulation } from 'angular2/core';
-import { Router, RouteConfig, ROUTER_DIRECTIVES } from 'angular2/router';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { HTTP_PROVIDERS } from '@angular/http';
+import { Router, RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS } from '@angular/router-deprecated';
 
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 
 @Component({
-    moduleId: __moduleName,
+    moduleId: module.id,
     selector: 'app',
     templateUrl: 'app.component.html',
     styleUrls: ['app.component.css'],
+    providers: [HTTP_PROVIDERS, ROUTER_PROVIDERS],
     directives: [ROUTER_DIRECTIVES],
     encapsulation: ViewEncapsulation.None
 })

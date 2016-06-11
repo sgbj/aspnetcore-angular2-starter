@@ -1,15 +1,19 @@
-﻿var gulp = require('gulp');
+﻿/// <binding ProjectOpened='default' />
+var gulp = require('gulp');
 
 var paths = {
     webroot: './wwwroot/',
     npm: './node_modules/'
 };
 paths.libs = [
+    paths.npm + '@angular/**/*',
+    paths.npm + 'core-js/**/*',
+    paths.npm + 'rxjs/**/*',
+    paths.npm + 'zone.js/dist/**/*',
+    paths.npm + 'reflect-metadata/**/*',
     paths.npm + 'systemjs/dist/**/*',
-    paths.npm + 'angular2/bundles/**/*',
-    paths.npm + 'es6-shim/**/*',
-    paths.npm + 'rxjs/bundles/**/*',
-    paths.npm + 'material-design-lite/dist/**/*'
+    paths.npm + 'material-design-lite/dist/**/*',
+
 ];
 paths.libDest = paths.webroot + 'lib/';
 

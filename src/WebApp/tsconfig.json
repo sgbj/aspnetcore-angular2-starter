@@ -5,15 +5,14 @@
     "noEmitOnError": true,
     "removeComments": false,
     "sourceMap": true,
-    "target": "es5",
+    "target": "es6",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "module": "system",
+    "module": "commonjs",
     "moduleResolution": "node"
   },
-  "files": [
-    "wwwroot/app/main.ts",
-    "wwwroot/app/typings.d.ts",
-    "node_modules/angular2/typings/browser.d.ts"
+  "exclude": [
+    "node_modules",
+    "wwwroot/lib"
   ]
 }
