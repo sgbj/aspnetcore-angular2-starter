@@ -3,9 +3,10 @@
 Visual Studio project for ASP.NET Core, Angular 2, and TypeScript
 
 * Visual Studio 2015 Update 2
-* [ASP.NET Core RC2](https://www.microsoft.com/net/core)
-* Angular 2 RC1
+* [ASP.NET Core 1.0](https://www.microsoft.com/net/core)
+* Angular 2 RC4
 * Material Design Lite
+* Swagger via [Swashbuckle (Ahoy)](https://github.com/domaindrivendev/Ahoy)
 
 ## command line
 

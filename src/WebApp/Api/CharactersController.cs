@@ -3,9 +3,11 @@
 namespace WebApp.Api
 {
     [Route("api/[controller]")]
+    [Produces("application/json")]
     public class CharactersController : Controller
     {
         [HttpGet]
+        [Produces(typeof(string[]))]
         public IActionResult Get()
         {
             return Ok(new[] {
