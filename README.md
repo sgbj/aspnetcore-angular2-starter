@@ -1,8 +1,9 @@
 # aspnetcore-angular2-starter
 
-Visual Studio project for ASP.NET Core, Angular 2, and TypeScript
+Visual Studio/Code project for ASP.NET Core, Angular 2, and TypeScript
 
-* Visual Studio 2015 Update 2
+* Visual Studio 2015 Update 3
+* Visual Studio Code
 * [ASP.NET Core 1.0](https://www.microsoft.com/net/core)
 * Angular 2 RC4
 * Material Design Lite
