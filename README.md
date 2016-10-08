@@ -1,12 +1,17 @@
 # aspnetcore-angular2-starter
 
-Visual Studio/Code project for ASP.NET Core, Angular 2, and TypeScript
+Visual Studio/Code project for ASP.NET Core, Angular 2, and TypeScript 2 using Webpack
 
 * Visual Studio 2015 Update 3
 * Visual Studio Code
-* [ASP.NET Core 1.0](https://www.microsoft.com/net/core)
-* Angular 2
-* Material Design Lite
+* [ASP.NET Core 1.0.1](https://www.microsoft.com/net/core)
+* Angular 2.0.2
+* Angular Universal
+* TypeScript 2
+* Webpack
+* Karma
+* Protractor
+* Bootstrap
 * Swagger via [Swashbuckle (Ahoy)](https://github.com/domaindrivendev/Ahoy)
 
 ## command line
@@ -16,9 +21,18 @@ From the root folder, type the following commands:
 ```
 cd src/webapp
 npm install
-tsc
-dotnet restore
-dotnet run
+npm run build:vendor
+set ASPNETCORE_ENVIRONMENT=Development
+npm start
+```
+
+Other commands:
+
+```
+npm run lint
+npm run test
+npm run e2e             (while running the app)
+npm clean:dist          (cleanup dist directory)
 ```
 
 ## screenshots

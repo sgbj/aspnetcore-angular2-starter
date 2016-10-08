@@ -1,11 +1,9 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
-using Swashbuckle.Swagger.Model;
-using System.IO;
 
 namespace WebApp
 {
@@ -26,17 +24,10 @@ namespace WebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSwaggerGen(options =>
-            {
-                options.SingleApiVersion(new Info
-                {
-                    Title = "Web API",
-                    Version = "v1"
-                });
-            });
-
             // Add framework services.
             services.AddMvc();
+
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,20 +36,34 @@ namespace WebApp
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-            app.UseSwagger();
-            app.UseSwaggerUi();
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+
+                app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
+                {
+                    HotModuleReplacement = true
+                });
+
+                app.UseSwagger();
+                app.UseSwaggerUi();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+            }
 
             app.UseStaticFiles();
-            
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                FileProvider = new PhysicalFileProvider(Path.Combine(env.ContentRootPath, "node_modules")),
-                RequestPath = "/node_modules"
-            });
 
             app.UseMvc(routes =>
             {
-                routes.MapSpaFallbackRoute("spa-fallback", new { controller = "home", action = "index" });
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+
+                routes.MapSpaFallbackRoute(
+                    name: "spa-fallback",
+                    defaults: new { controller = "Home", action = "Index" });
             });
         }
     }
