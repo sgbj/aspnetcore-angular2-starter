@@ -20,7 +20,7 @@
     "Microsoft.Extensions.Logging.Console": "1.0.0",
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0",
-    "Microsoft.AspNetCore.AngularServices": "1.0.0-beta-000019",
+    "Microsoft.AspNetCore.AngularServices": "1.0.0-*",
     "Swashbuckle": "6.0.0-beta902",
     "Microsoft.Extensions.Configuration.CommandLine": "1.0.0"
   },
@@ -70,7 +70,7 @@
   },
 
   "scripts": {
-    "prepublish": [ "npm run rebuild-sass", "npm run build" ],
+    "prepublish": [ "npm install", "npm run rebuild-sass", "npm run build" ],
     "postpublish": [ "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%" ]
   }
 }

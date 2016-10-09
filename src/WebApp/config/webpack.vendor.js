@@ -30,11 +30,11 @@ module.exports = merge(common, {
             path: path.resolve(__dirname, '../wwwroot/dist/[name]-manifest.json'),
             name: '[name]_lib'
         }),
-        /*new UglifyJsPlugin({
+        new UglifyJsPlugin({
             beautify: false,
             mangle: { screw_ie8: true, keep_fnames: true },
             compress: { screw_ie8: true, warnings: false },
             comments: false
-        })*/
+        })
     ]
 });

@@ -21,6 +21,7 @@ From the root folder, type the following commands:
 ```
 cd src/webapp
 npm install
+dotnet restore
 npm run build:vendor
 set ASPNETCORE_ENVIRONMENT=Development
 npm start
