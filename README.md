@@ -5,7 +5,7 @@ Visual Studio/Code project for ASP.NET Core, Angular 2, and TypeScript 2 using W
 * Visual Studio 2015 Update 3
 * Visual Studio Code
 * [ASP.NET Core 1.0.1](https://www.microsoft.com/net/core)
-* Angular 2.0.2
+* Angular 2.1.0
 * Angular Universal
 * TypeScript 2
 * Webpack
@@ -20,7 +20,7 @@ From the root folder, type the following commands:
 
 ```
 cd src/webapp
-npm install
+npm install   -- or yarn
 dotnet restore
 npm run build:vendor
 set ASPNETCORE_ENVIRONMENT=Development
