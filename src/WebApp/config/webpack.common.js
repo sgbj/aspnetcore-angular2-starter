@@ -25,7 +25,7 @@ module.exports = {
             {
                 test: /\.ts$/,
                 exclude: [/\.(e2e\-spec|e2e)\.ts$/],
-                loaders: ['angular2-template', 'awesome-typescript']
+                loaders: ['angular2-template', 'awesome-typescript', 'angular2-router']
             }, {
                 include: appRoot,
                 test: /\.css$/,

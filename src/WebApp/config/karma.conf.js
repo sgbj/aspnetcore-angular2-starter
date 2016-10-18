@@ -5,9 +5,9 @@
         basePath: '',
         frameworks: ['jasmine'],
         exclude: [],
-        files: [{ pattern: './config/spec-bundle.js', watched: false }],
+        files: [{ pattern: './config/test.js', watched: false }],
         preprocessors: {
-            './config/spec-bundle.js': ['coverage', 'webpack', 'sourcemap']
+            './config/test.js': ['coverage', 'webpack', 'sourcemap']
         },
         webpack: webpackConfig,
         coverageReporter: {
