@@ -11,6 +11,9 @@
       "./node_modules/@types"
     ]
   },
+  "include": [
+    "wwwroot/src/**/*.ts"
+  ],
   "exclude": [ "bin", "node_modules" ],
   "awesomeTypescriptLoaderOptions": {
     "forkChecker": true,

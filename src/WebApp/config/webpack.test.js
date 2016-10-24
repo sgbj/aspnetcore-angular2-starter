@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
     devtool: 'inline-source-map',
     resolve: {
-        extensions: ['', '.ts', '.js'],
+        extensions: ['.ts', '.js'],
         root: '../wwwroot/src',
     },
     module: {

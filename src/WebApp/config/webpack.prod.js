@@ -5,6 +5,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
 const path = require('path');
 const common = require('./webpack.common');
+const AotPlugin = require('@ngtools/webpack').AotPlugin;
+
+// Angular 2 AOT compilation
+common.module.loaders[0].loaders = ['@ngtools/webpack'];
 
 module.exports = merge(common, {
     entry: {
@@ -17,6 +21,10 @@ module.exports = merge(common, {
         publicPath: '/dist/'
     },
     plugins: [
+        new AotPlugin({
+            tsConfigPath: path.resolve(__dirname, '../tsconfig.json'),
+            entryModule: 'wwwroot/src/app/app.module#AppModule'
+        }),
         new ExtractTextPlugin('styles.css'),
         new atl.ForkCheckerPlugin(),
         new webpack.DllReferencePlugin({
@@ -33,10 +41,5 @@ module.exports = merge(common, {
             compress: { screw_ie8: true },
             comments: false
         })
-    ],
-    tslint: {
-        emitErrors: true,
-        failOnHint: true,
-        resourcePath: path.resolve(__dirname, '../wwwroot/src')
-    }
+    ]
 });

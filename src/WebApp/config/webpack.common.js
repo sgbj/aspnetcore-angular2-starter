@@ -5,22 +5,10 @@ const appRoot = path.resolve(__dirname, '../wwwroot/src/app');
 module.exports = {
     devtool: 'source-map',
     resolve: {
-        extensions: ['', '.ts', '.js'],
-        root: '../wwwroot/src'
+        extensions: ['.ts', '.js']
     },
     context: path.resolve(__dirname, './'),
     module: {
-        preLoaders: [
-            {
-                test: /\.js$/,
-                loader: 'source-map',
-                exclude: [/node_modules/]
-            }, {
-                test: /\.ts$/,
-                loader: 'tslint',
-                exclude: [/node_modules/]
-            }
-        ],
         loaders: [
             {
                 test: /\.ts$/,
@@ -53,7 +41,7 @@ module.exports = {
     },
     node: {
         fs: 'empty',
-        global: 'window',
+        global: true,
         crypto: 'empty',
         process: true,
         module: false,
